@@ -10,10 +10,9 @@
 
 @implementation DLCrashReporter
 
--(void)initiateDLCrashReporter:(BOOL)enableUserAlert
+-(void)initiateDLCrashReporter
 {
     enableNotification = YES;
-    enableNotification = enableUserAlert;
     
     PLCrashReporter *crashReporter = [PLCrashReporter sharedReporter];
     NSError *error;
@@ -62,6 +61,10 @@ finish:
     [self pendingCrashAlert:nil];
     return;
 }
+//-(void)enableUserAlert:(BOOL)enableUserAlert
+//{
+//    enableNotification = enableUserAlert;
+//}
 -(void)pendingCrashAlert:(NSDictionary*)dictionary
 {
     if(enableNotification)

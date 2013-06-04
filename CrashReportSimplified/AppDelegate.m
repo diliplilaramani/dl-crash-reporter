@@ -13,7 +13,7 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    [[DLCrashReporter new] initiateDLCrashReporter:YES];
+    [[DLCrashReporter new] initiateDLCrashReporter];
     
     return YES;
 }

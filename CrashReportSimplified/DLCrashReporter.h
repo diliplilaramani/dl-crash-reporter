@@ -14,7 +14,8 @@
     BOOL enableNotification;
 }
 
--(void)initiateDLCrashReporter:(BOOL)enableUserAlert;
+-(void)initiateDLCrashReporter;
+//-(void)enableUserAlert:(BOOL)enableUserAlert;
 -(void)pendingCrashAlert:(NSDictionary*)dictionary;
 
 @end
