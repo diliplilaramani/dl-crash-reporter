@@ -26,4 +26,9 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (IBAction)CrashButton {
+    
+    NSArray *arr = [[NSArray alloc] init];
+    NSLog(@"%@",[arr objectAtIndex:0]);
+}
 @end

@@ -18,6 +18,8 @@
 		DABE3D68175DD0F30037CE81 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DABE3D67175DD0F30037CE81 /* Default-568h@2x.png */; };
 		DABE3D6B175DD0F30037CE81 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DABE3D69175DD0F30037CE81 /* MainStoryboard.storyboard */; };
 		DABE3D6E175DD0F30037CE81 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DABE3D6D175DD0F30037CE81 /* ViewController.m */; };
+		DABE3D76175DD1F80037CE81 /* DLCrashReporter.m in Sources */ = {isa = PBXBuildFile; fileRef = DABE3D75175DD1F80037CE81 /* DLCrashReporter.m */; };
+		DABE3D78175DD2280037CE81 /* CrashReporter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DABE3D77175DD2280037CE81 /* CrashReporter.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +39,9 @@
 		DABE3D6A175DD0F30037CE81 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
 		DABE3D6C175DD0F30037CE81 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		DABE3D6D175DD0F30037CE81 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		DABE3D74175DD1F80037CE81 /* DLCrashReporter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DLCrashReporter.h; path = CrashReportSimplified/DLCrashReporter.h; sourceTree = "<group>"; };
+		DABE3D75175DD1F80037CE81 /* DLCrashReporter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DLCrashReporter.m; path = CrashReportSimplified/DLCrashReporter.m; sourceTree = "<group>"; };
+		DABE3D77175DD2280037CE81 /* CrashReporter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CrashReporter.framework; path = CrashReportSimplified/CrashReporter.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +52,7 @@
 				DABE3D52175DD0F30037CE81 /* UIKit.framework in Frameworks */,
 				DABE3D54175DD0F30037CE81 /* Foundation.framework in Frameworks */,
 				DABE3D56175DD0F30037CE81 /* CoreGraphics.framework in Frameworks */,
+				DABE3D78175DD2280037CE81 /* CrashReporter.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -56,6 +62,7 @@
 		DABE3D45175DD0F30037CE81 = {
 			isa = PBXGroup;
 			children = (
+				DABE3D79175DD2380037CE81 /* DLCrashReporter */,
 				DABE3D57175DD0F30037CE81 /* CrashReportSimplified */,
 				DABE3D50175DD0F30037CE81 /* Frameworks */,
 				DABE3D4F175DD0F30037CE81 /* Products */,
@@ -105,6 +112,16 @@
 				DABE3D67175DD0F30037CE81 /* Default-568h@2x.png */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		DABE3D79175DD2380037CE81 /* DLCrashReporter */ = {
+			isa = PBXGroup;
+			children = (
+				DABE3D77175DD2280037CE81 /* CrashReporter.framework */,
+				DABE3D74175DD1F80037CE81 /* DLCrashReporter.h */,
+				DABE3D75175DD1F80037CE81 /* DLCrashReporter.m */,
+			);
+			name = DLCrashReporter;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -176,6 +193,7 @@
 				DABE3D5E175DD0F30037CE81 /* main.m in Sources */,
 				DABE3D62175DD0F30037CE81 /* AppDelegate.m in Sources */,
 				DABE3D6E175DD0F30037CE81 /* ViewController.m in Sources */,
+				DABE3D76175DD1F80037CE81 /* DLCrashReporter.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -260,6 +278,10 @@
 		DABE3D72175DD0F30037CE81 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/CrashReportSimplified\"",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "CrashReportSimplified/CrashReportSimplified-Prefix.pch";
 				INFOPLIST_FILE = "CrashReportSimplified/CrashReportSimplified-Info.plist";
@@ -271,6 +293,10 @@
 		DABE3D73175DD0F30037CE81 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/CrashReportSimplified\"",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "CrashReportSimplified/CrashReportSimplified-Prefix.pch";
 				INFOPLIST_FILE = "CrashReportSimplified/CrashReportSimplified-Info.plist";
